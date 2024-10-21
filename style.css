@@ -17,9 +17,22 @@ body {
     position: relative;
 }
 
+#score {
+    background-color: white;
+}
+
 #snake {
-    background-color: coral;
+    background-color: rgb(7, 165, 2);
     width: 35px;
     height: 35px;
     position: absolute;
+}
+
+#food {
+    background-color: rgb(255, 0, 0);
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
