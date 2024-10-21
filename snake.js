@@ -5,10 +5,10 @@ class Snake {
         newGame.element.appendChild(this.element);
 
         this.positionLeft = 0;
-        this.positionTop = 0;
         this.positionBottom = 0;
-        this.positionRight = 0;
         this.velocity = 5;
-
+        this.direction = null;
     }
 }
+
+const newSnake = new Snake()
