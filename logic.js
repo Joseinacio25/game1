@@ -18,3 +18,12 @@ switch (e.key) {
 
 });
 
+let frames = 0;
+
+function gameLoop() {
+    requestAnimationFrame(gameLoop);
+    frames++;
+    newSnake.move(newSnake.direction);
+  }
+  
+  requestAnimationFrame(gameLoop);

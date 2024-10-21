@@ -11,6 +11,23 @@ class Snake {
         this.direction = null;
         this.width = this.element.getBoundingClientRect().width;
     }
+    move(direction) {
+      if (direction === "left") {
+        this.positionLeft -= this.velocity;
+        if (this.positionLeft <= 0) {
+          this.positionLeft = 0;
+        }
+      } else if (direction === "right") {
+        this.positionLeft += this.velocity;
+        if (this.positionLeft >= newGame.width - this.width) {
+          this.positionLeft = newGame.width - this.width;
+        }
+        else if (direction === "up") {
+          
+        }
+      }
+      this.element.style.left = this.positionLeft + "px";
+    }
 }
 
 const newSnake = new Snake()
