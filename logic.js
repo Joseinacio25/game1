@@ -24,6 +24,28 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
     frames++;
     newSnake.move(newSnake.direction);
+    crashTest();
   }
   
   requestAnimationFrame(gameLoop);
+
+  function crashTest() {
+    const snakeLeftEdge = newSnake.positionLeft;
+    const snakeRightEdge = newSnake.positionLeft + newSnake.width;
+    const snakeTopEdge = newSnake.positionTop;
+    const snakeBottomEdge = newSnake.positionTop + newSnake.height;
+  
+    const foodLeftEdge = newFood.positionLeft;
+    const foodRightEdge = newFood.positionLeft + newFood.width;
+    const foodTopEdge = newFood.positionTop;
+    const foodBottomEdge = newFood.positionTop + newFood.height;
+  
+    if (
+      snakeLeftEdge < foodRightEdge &&
+      snakeRightEdge > foodLeftEdge &&
+      snakeTopEdge < foodBottomEdge &&
+      snakeBottomEdge > foodTopEdge
+    ) {
+       //newFood.hasEaten(); 
+     newFood.removeFood();
+    }};

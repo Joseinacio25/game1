@@ -19,16 +19,17 @@ body {
 
 #snake {
     background-color: rgb(7, 165, 2);
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     position: absolute;
+    background-image: url("./7e43c64edabc048.png");
+    background-size: cover;
+    background-position: center;
 }
 
 #food {
     background-color: rgb(255, 0, 0);
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    bottom: 0;
-    left: 0;
 }
