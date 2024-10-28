@@ -24,12 +24,12 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
     frames++;
     newSnake.move(newSnake.direction);
-    crashTest();
+    crashFood();
   }
   
   requestAnimationFrame(gameLoop);
 
-  function crashTest() {
+  function crashFood() {
     const snakeLeftEdge = newSnake.positionLeft;
     const snakeRightEdge = newSnake.positionLeft + newSnake.width;
     const snakeTopEdge = newSnake.positionTop;
@@ -45,7 +45,12 @@ function gameLoop() {
       snakeRightEdge > foodLeftEdge &&
       snakeTopEdge < foodBottomEdge &&
       snakeBottomEdge > foodTopEdge
-    ) {
-       //newFood.hasEaten(); 
-     newFood.removeFood();
+    ) { 
+    newFood.growSnake();
+    newFood.removeFood();
+    newFood = new Food();
+    
+    console.log("se la comioooo");
+    
+    
     }};
