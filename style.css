@@ -13,16 +13,24 @@ body {
 #game-area {
     width: 80vw;
     height: 80vh;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 131, 163);
     position: relative;
 }
 
 #snake {
-    background-color: rgb(0, 0, 0);
     width: 40px;
     height: 40px;
     position: absolute;
-    background-image: url("./7e43c64edabc048.png");
+    background-image: url("./serpiente1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#enemy {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background-image: url("./aguila.png");
     background-size: cover;
     background-position: center;
 }

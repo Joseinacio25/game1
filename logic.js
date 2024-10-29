@@ -25,7 +25,15 @@ function gameLoop() {
     frames++;
     newSnake.move(newSnake.direction);
     crashFood();
-  }
+    newGame.enemies.forEach((enemy) => {
+        enemy.attack();
+        crashTest(enemy);
+      });
+
+      if (frames % 50 === 0) {
+        // this is going to run every 100 frames
+        new Enemy();
+  }}
   
   requestAnimationFrame(gameLoop);
 
@@ -46,11 +54,31 @@ function gameLoop() {
       snakeTopEdge < foodBottomEdge &&
       snakeBottomEdge > foodTopEdge
     ) { 
-    newFood.growSnake();
     newFood.removeFood();
     newFood = new Food();
     
     console.log("se la comioooo");
-    
-    
     }};
+
+    function crashTest(enemy) {
+        const snakeLeftEdge = newSnake.positionLeft;
+        const snakeRightEdge = newSnake.positionLeft + newSnake.width;
+        const snakeTopEdge = newSnake.positionTop;
+        const snakeBottomEdge = newSnake.positionTop + newSnake.height;
+      
+        const enemyLeftEdge = enemy.left;
+        const enemyRightEdge = enemy.left + enemy.width;
+        const enemyTopEdge = enemy.top;
+        const enemyBottomEdge = enemy.top + enemy.height;
+      
+        if (
+          snakeLeftEdge < enemyRightEdge &&
+          snakeRightEdge > enemyLeftEdge &&
+          snakeTopEdge < enemyBottomEdge &&
+          snakeBottomEdge > enemyTopEdge
+        ) {
+            enemy.destroy();
+            console.log("pierdes vida");
+            
+        }
+    }

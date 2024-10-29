@@ -20,12 +20,6 @@ class Food {
       this.element.style.left = this.positionLeft + "px"
     }
 
-    growSnake () {
-      if (newSnake === this.positionLeft && newSnake === this.positionTop) {
-        snakeArray.push([this.positionLeft, this.positionTop])
-      }
-    }
-
     removeFood () {
     // this.element.style.position = "relative";
     //this.element.style.top = -10000 + "px"
@@ -37,8 +31,5 @@ class Food {
 
    
 }
-/*for (let i = 0; i < 1; i++) {
-  const newFood = new Food;
-}*/
 
 let newFood = new Food
