@@ -31,7 +31,6 @@ function gameLoop() {
       });
 
       if (frames % 50 === 0) {
-        // this is going to run every 100 frames
         new Enemy();
   }}
   
@@ -77,8 +76,14 @@ function gameLoop() {
           snakeTopEdge < enemyBottomEdge &&
           snakeBottomEdge > enemyTopEdge
         ) {
+            newGame.lives--;
+            newGame.updateLives();
             enemy.destroy();
             console.log("pierdes vida");
+            if (newGame.lives <= 0) {
+              newGame.gameOver = true;
+              newGame.gameOverScreen.style.display = "flex";
+            }
             
         }
     }
