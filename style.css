@@ -47,6 +47,10 @@ body {
     background-position: center;
 }
 
+#score {
+    position: absolute;
+}
+
 #game-over {
     position: absolute;
     display: none;

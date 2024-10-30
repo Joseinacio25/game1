@@ -8,7 +8,6 @@ class Game {
       this.width = this.element.getBoundingClientRect().width;
       this.height = this.element.getBoundingClientRect().height;
       this.livesElement = document.querySelector("#lives");
-      this.scoreElement = document.querySelector("#score")
       this.gameOverScreen = document.querySelector("#game-over");
       this.updateLives();
      

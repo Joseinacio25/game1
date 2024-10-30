@@ -22,7 +22,7 @@ class Food {
 
     removeFood () {
     // this.element.style.position = "relative";
-    //this.element.style.top = -10000 + "px"
+    // this.element.style.top = -10000 + "px"
     this.element.style.display = "none";
     const foodIndex = Food.foodArray.indexOf(this);
 

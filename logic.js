@@ -53,6 +53,8 @@ function gameLoop() {
       snakeTopEdge < foodBottomEdge &&
       snakeBottomEdge > foodTopEdge
     ) { 
+    newGame.score++;
+    document.querySelector("#score").textContent = newGame.score
     newFood.removeFood();
     newFood = new Food();
     
