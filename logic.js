@@ -27,7 +27,7 @@ function gameLoop() {
     crashFood();
     newGame.enemies.forEach((enemy) => {
         enemy.attack();
-        crashTest(enemy);
+        collision(enemy);
       });
 
       if (frames % 50 === 0) {
@@ -59,7 +59,7 @@ function gameLoop() {
     console.log("se la comioooo");
     }};
 
-    function crashTest(enemy) {
+    function collision(enemy) {
         const snakeLeftEdge = newSnake.positionLeft;
         const snakeRightEdge = newSnake.positionLeft + newSnake.width;
         const snakeTopEdge = newSnake.positionTop;

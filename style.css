@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url("./fondo.png");
+    background-image: url("./imagenes/thumb-1920-1020613.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -24,7 +24,7 @@ body {
     width: 50px;
     height: 50px;
     position: absolute;
-    background-image: url("./serpiente1.png");
+    background-image: url("./imagenes/serpiente1.png");
     background-size: cover;
     background-position: center;
 }
@@ -33,7 +33,7 @@ body {
     width: 80px;
     height: 80px;
     position: absolute;
-    background-image: url("./aguila.png");
+    background-image: url("./imagenes/aguila.png");
     background-size: cover;
     background-position: center;
 }
@@ -42,7 +42,7 @@ body {
     width: 40px;
     height: 40px;
     position: absolute;
-    background-image: url("./dboc16e-6486966f-c438-41f4-bce5-52dcb56934b0.png");
+    background-image: url("./imagenes/dboc16e-6486966f-c438-41f4-bce5-52dcb56934b0.png");
     background-size: cover;
     background-position: center;
 }
