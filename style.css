@@ -8,9 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url("./imagenes/thumb-1920-1020613.jpg");
-    background-size: cover;
-    background-position: center;
+    
   }
 
 #game-area {
@@ -18,6 +16,9 @@ body {
     height: 80vh;
     background-color: rgba(206, 206, 206, 0.493);
     position: relative;
+    background-image: url("./imagenes/fondo.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 #snake {

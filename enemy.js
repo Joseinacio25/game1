@@ -11,7 +11,7 @@ class Enemy {
         this.element.style.left = this.left + "px";
         this.element.style.top = this.top + "px";
         
-    newGame.enemies.push(this);
+        newGame.enemies.push(this);
     }
 
     attack() {
