@@ -42,4 +42,4 @@ class Snake {
     }
 }
 
-const newSnake = new Snake()
+let newSnake = new Snake()

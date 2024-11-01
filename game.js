@@ -18,4 +18,4 @@ class Game {
 
   }
 
-  const newGame = new Game();
+  let newGame = new Game();
