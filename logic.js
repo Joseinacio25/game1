@@ -27,12 +27,15 @@ function gameLoop() {
     crashFood();
     newGame.enemies.forEach((enemy) => {
         enemy.attack();
-        collision(enemy);
-      });
+         collision(enemy);
+       });
 
-      if (frames % 50 === 0) {
+
+      if (frames % 50 === 0 && newGame.lives > 0) {
+      
         new Enemy();
-  }}
+  }
+      }
   
   requestAnimationFrame(gameLoop);
 
@@ -85,6 +88,7 @@ function gameLoop() {
             if (newGame.lives <= 0) {
               newGame.gameOver = true;
               newGame.gameOverScreen.style.display = "flex";
+              newGame.enemies = []
             }
             
         }
