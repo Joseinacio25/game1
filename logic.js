@@ -84,12 +84,13 @@ function gameLoop() {
             newGame.lives--;
             newGame.updateLives();
             enemy.destroy();
+            eagleSound.play();
             console.log("pierdes vida");
             if (newGame.lives <= 0) {
               newGame.gameOver = true;
               newGame.gameOverScreen.style.display = "flex";
-              newGame.enemies = []
             }
-            
         }
     }
+
+    const eagleSound = document.querySelector("#eagle")
